@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phone Hunter 2</title>
+  <!--daisy ui-->
+
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="container mx-auto">
+  <header class=" px-10 bg-[#0D6EFD0D]">
+    <nav>
+      <!--banner title-->
+      <div class="flex justify-between py-12">
+        <h1 class="text-3xl text-[#403F3F] font-bold">Hot Gadgets</h1>
+        <button class="btn btn-primary font-semibold text-[white] text-xl px-6 bg-[#0D6EFD] border-none">Sign
+          Up</button>
+      </div>
+    </nav>
+
+  </header>
+
+  <main>
+    <!--search section-->
+    <section class="text-center my-10 ">
+      <h1 class="text-3xl text-[#403F3F] font-bold my-5">Search Your Phone</h1>
+      <div>
+        <input id="input-field" type="text" placeholder="Search your phone"
+          class="input input-bordered w-full max-w-xs" />
+        <button onclick="searchPhone()" class="btn btn-neutral  py-0 px-5">Search</button>
+
+      </div>
+    </section>
+       <!--spinner or loader-->
+       <div id="spinner-container" class="text-center my-40 hidden">
+        <span class="loading loading-bars loading-lg"></span>
+    </div>
+
+    <!--phone cards section-->
+    <section class="my-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 rounded-2xl" id="div-container">
+        <!-- <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+                    <div class="card-body">
+                      <h2 class="card-title">Shoes!</h2>
+                      <p>If a dog chews shoes whose shoes does he choose?</p>
+                      <div class="card-actions justify-end">
+                        <button class="btn btn-primary">Buy Now</button>
+                      </div>
+                    </div> -->
+      </div>
+    </section>
+
+    <section class="flex justify-center bg-base-100">
+      <button onclick="showAll()" id="show-more" class="btn btn-neutral">Show More</button>
+    </section>
+    <!--modal section-->
+    <section>
+      <!-- Open the modal using ID.showModal() method -->
+
+      <!-- You can open the modal using ID.showModal() method -->
+      
+      <dialog id="modal" class="modal">
+        <div class="modal-box">
+          <form method="dialog">
+            <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+          </form>
+          <h3 id="modal-title" class="font-bold text-lg">Hello!</h3>
+          <div id="div-modal-container">
+
+          </div>
+        </div>
+      </dialog>
+    </section>
+  </main>
+
+  <footer>
+
+  </footer>
+
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>
